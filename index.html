@@ -1,190 +1,348 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShopReelAI — Create Viral Product Videos & Earn Affiliate Commissions</title>
+  <meta name="description" content="ShopReelAI automatically creates short product videos (TikTok, Reels, Shorts), generates optimized captions, and gives trackable affiliate links — earn commissions without filming or editing." />
+  <meta name="keywords" content="ShopReelAI, AI video creator, affiliate marketing, TikTok videos, product videos, viral videos, dropshipping, earn commissions" />
+  <link rel="canonical" href="https://tubj105-rgb.github.io/shopreel-landing/" />
 
-    <!-- ✅ SEO -->
-    <title>ShopReel AI – Create Viral Product Videos Automatically</title>
-    <meta name="description" content="ShopReel AI creates viral video ads for products using artificial intelligence. Boost conversions, sales, and traffic instantly.">
-    <meta name="keywords" content="ShopReel AI, AI video generator, product ads, viral videos, eCommerce tools, affiliate marketing, traffic, conversions">
+  <!-- Open Graph -->
+  <meta property="og:title" content="ShopReelAI — Create Viral Product Videos & Earn Commissions" />
+  <meta property="og:description" content="AI creates short product videos (TikTok/Reels/Shorts) and gives you affiliate links. No filming. No editing. Start earning today." />
+  <meta property="og:url" content="https://tubj105-rgb.github.io/shopreel-landing/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://i.ibb.co/X2DMz0q/shopreel-cover.jpg" />
 
-    <!-- Social preview -->
-    <meta property="og:title" content="ShopReel AI – Viral AI Video System" />
-    <meta property="og:description" content="Turn any product into viral scroll-stopping video ads using AI." />
-    <meta property="og:image" content="https://i.ibb.co/X2DMz0q/shopreel-cover.jpg" />
-    <meta property="og:type" content="website" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ShopReelAI — Create Viral Product Videos & Earn Commissions" />
+  <meta name="twitter:description" content="AI creates TikTok/Reels/Shorts for trending products and returns trackable affiliate links." />
+  <meta name="twitter:image" content="https://i.ibb.co/X2DMz0q/shopreel-cover.jpg" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="https://i.ibb.co/nPxH0XL/ai-icon.png" />
+  <!-- Tailwind CDN (quick styling) -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Animation CSS -->
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #222;
-            overflow-x: hidden;
-        }
+  <!-- Structured data (Product + FAQ) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"ShopReelAI",
+    "image":"https://i.ibb.co/X2DMz0q/shopreel-cover.jpg",
+    "description":"AI-powered tool to create short product videos and generate affiliate tracking links. No filming or editing required.",
+    "brand":{"@type":"Brand","name":"ShopReelAI"},
+    "offers":{"@type":"Offer","url":"https://jvz9.com/c/3453257/428281/","price":"37","priceCurrency":"USD","availability":"https://schema.org/InStock"}
+  }
+  </script>
 
-        header {
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            animation: fadeIn 1.5s ease-out;
-        }
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Do I need to shoot videos myself?","acceptedAnswer":{"@type":"Answer","text":"No — ShopReelAI uses AI and licensed B-roll to generate professional shorts for you."}},
+      {"@type":"Question","name":"Can I track conversions?","acceptedAnswer":{"@type":"Answer","text":"Yes — ShopReelAI generates trackable links and shows clicks/CTR in the dashboard."}},
+      {"@type":"Question","name":"Do I need followers?","acceptedAnswer":{"@type":"Answer","text":"No — the tool helps you get discovery via TikTok/Instagram/YouTube algorithms."}}
+    ]
+  }
+  </script>
 
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
+  <style>
+    :root{--accent:#6366F1;--accent-2:#7C3AED;--cta:#F59E0B}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#f8fafc; color:#0f172a; margin:0}
+    /* header */
+    .hero{background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:white; padding:72px 20px}
+    .hero .container{max-width:1200px;margin:0 auto;display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+    .hero h1{font-size:2.25rem;line-height:1.05;font-weight:800;margin:0}
+    .hero p{opacity:.9;margin:14px 0 0}
+    .btn-cta{background:var(--cta);color:#000;padding:12px 20px;border-radius:10px;font-weight:700;display:inline-block;margin-top:18px;text-decoration:none}
+    .btn-ghost{border:2px solid rgba(255,255,255,.12);color:white;padding:10px 18px;border-radius:10px;text-decoration:none;margin-left:12px}
 
-        header p {
-            font-size: 20px;
-            opacity: 0.9;
-        }
+    /* layout */
+    .container{max-width:1100px;margin:0 auto;padding:40px 20px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:white;border-radius:12px;padding:20px;box-shadow:0 6px 20px rgba(2,6,23,.06);transition:transform .25s}
+    .card:hover{transform:translateY(-6px)}
+    .feature{display:flex;gap:14px;align-items:flex-start}
+    .feature img{width:68px;height:68px;object-fit:cover;border-radius:10px}
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 14px 28px;
-            background: #ffb100;
-            color: #000;
-            font-weight: bold;
-            border-radius: 10px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+    /* images */
+    .hero-media{flex:1;min-width:300px}
+    .hero-cta{flex:1;min-width:280px}
 
-        .btn:hover {
-            background: #ff8c00;
-        }
-
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 50px 20px;
-        }
-
-        .fade {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 1.1s ease-out;
-        }
-
-        .fade.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .feature-box {
-            padding: 25px;
-            border-radius: 10px;
-            background: #f3f4f6;
-            margin-bottom: 20px;
-            transition: 0.3s;
-        }
-
-        .feature-box:hover {
-            background: #e5e7eb;
-        }
-
-        .img-full {
-            width: 100%;
-            border-radius: 12px;
-            margin-top: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #111;
-            color: #bbb;
-            margin-top: 40px;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            header h1 { font-size: 32px; }
-            header p { font-size: 18px; }
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    /* responsive */
+    @media (max-width:900px){.grid-3{grid-template-columns:repeat(1,1fr)} .hero{padding:48px 16px} .hero h1{font-size:1.6rem}}
+    /* animation (simple fade-in on scroll) */
+    .reveal{opacity:0;transform:translateY(30px);transition:all .9s cubic-bezier(.2,.9,.3,1)}
+    .reveal.show{opacity:1;transform:none}
+    /* small UI */
+    footer{background:#0f172a;color:#cbd5e1;padding:28px 20px;text-align:center}
+    a.affiliate{display:inline-block}
+  </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<header>
-    <h1>ShopReel AI – Turn Any Product Into Viral Video Ads</h1>
-    <p>Create scroll-stopping videos in seconds using AI. No editing. No skills needed.</p>
-    <a href="https://jvz9.com/c/3453257/428281/" class="btn">Get Instant Access</a>
-</header>
-
-<!-- ABOUT -->
-<section class="fade">
-    <h2>What Is ShopReel AI?</h2>
-    <p>
-        ShopReel AI is a revolutionary tool that automatically creates viral social-media-style videos for any 
-        product. Perfect for eCommerce, affiliate marketing, dropshipping, or brand promotion.
-    </p>
-
-    <img src="https://i.ibb.co/23DRK7j/shopreel-preview.jpg" class="img-full">
-</section>
-
-<!-- FEATURES -->
-<section class="fade">
-    <h2>Why ShopReel AI Is So Powerful</h2>
-
-    <div class="feature-box">
-        <h3>🔥 AI Generates Videos Automatically</h3>
-        <p>Just paste a product link — ShopReel AI creates a finished video ready for TikTok, Instagram, YouTube Shorts.</p>
+  <!-- NAV -->
+  <nav class="container" aria-label="Main navigation" style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;gap:12px;align-items:center">
+      <!-- Replace logo.png with an official logo from ShopReel if you want -->
+      <img src="https://i.ibb.co/nPxH0XL/ai-icon.png" alt="ShopReelAI logo" style="width:52px;height:52px;object-fit:contain;border-radius:8px">
+      <div>
+        <div style="font-weight:800">ShopReelAI</div>
+        <div style="font-size:12px;color:#6b7280">AI video creator for affiliates</div>
+      </div>
     </div>
 
-    <div class="feature-box">
-        <h3>🚀 Boost Conversions Instantly</h3>
-        <p>Short videos increase engagement by up to 300% and lead to more sales.</p>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="#how" style="color:#374151;text-decoration:none">How it works</a>
+      <a href="#features" style="color:#374151;text-decoration:none">Features</a>
+      <a href="#pricing" style="color:#374151;text-decoration:none">Pricing</a>
+      <a href="https://jvz9.com/c/3453257/428281/" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn-cta">Get Instant Access</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-cta" style="flex:1;min-width:320px">
+        <h1>Create Viral Product Videos — <span style="color: #fff7ed">No Camera, No Editing</span></h1>
+        <p>AI finds trending products, generates 20–35s vertical videos with captions & hashtags, and creates trackable affiliate links — start earning commissions today.</p>
+
+        <div style="margin-top:18px">
+          <a href="https://jvz9.com/c/3453257/428281/" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn-cta">Try ShopReelAI — Start Free</a>
+          <a href="#how" class="btn-ghost">How it works</a>
+        </div>
+
+        <ul style="margin-top:16px;color:#f3f4f6;font-size:14px;list-style:none;padding-left:0">
+          <li>✅ Auto-discover high-commission products</li>
+          <li>✅ Create platform-ready TikTok / Reels / Shorts</li>
+          <li>✅ Track clicks, CTR & commissions</li>
+        </ul>
+      </div>
+
+      <div class="hero-media" style="flex:1.05;text-align:right;min-width:320px">
+        <!-- Replace the src below with official hero screenshot from shopreel.io -->
+        <img src="https://i.ibb.co/X2DMz0q/shopreel-cover.jpg" alt="ShopReel demo" style="width:100%;max-width:520px;border-radius:14px;box-shadow:0 20px 40px rgba(2,6,23,.12)">
+        <div style="font-size:12px;color:#f3f4f6;margin-top:8px">Demo: AI creates a video from a product link in under 60s</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="container" aria-labelledby="how-title">
+    <h2 id="how-title" style="font-size:1.6rem;font-weight:700;margin-bottom:10px">How it works — 4 simple steps</h2>
+    <p style="color:#6b7280;margin-bottom:20px">From product discovery to published short — ShopReelAI automates the entire affiliate video workflow.</p>
+
+    <div class="grid-3">
+      <div class="card reveal">
+        <div style="font-size:22px;font-weight:700;color:var(--accent)">1</div>
+        <h3 style="margin-top:8px">Pick a Niche</h3>
+        <p style="color:#6b7280">Choose from preloaded niches or enter your own; AI surfaces trending products and commissions.</p>
+      </div>
+
+      <div class="card reveal">
+        <div style="font-size:22px;font-weight:700;color:var(--accent)">2</div>
+        <h3 style="margin-top:8px">Generate Video</h3>
+        <p style="color:#6b7280">AI builds a 20–35s vertical video with B-roll, overlays, and a compelling script.</p>
+      </div>
+
+      <div class="card reveal">
+        <div style="font-size:22px;font-weight:700;color:var(--accent)">3</div>
+        <h3 style="margin-top:8px">Add Affiliate Link</h3>
+        <p style="color:#6b7280">Use your affiliate link in captions & bio-storefront; the platform creates trackable links automatically.</p>
+      </div>
     </div>
 
-    <div class="feature-box">
-        <h3>🌐 Works for Any Niche</h3>
-        <p>Electronics, beauty, gadgets, clothing, fitness — everything works with ShopReel AI.</p>
+    <div style="display:flex;gap:16px;margin-top:18px;flex-wrap:wrap">
+      <div class="card reveal" style="flex:1;min-width:260px">
+        <h4 style="font-weight:700">Post & Schedule</h4>
+        <p style="color:#6b7280">Export formatted versions for TikTok, Reels, and Shorts; schedule or auto-post to multiple platforms.</p>
+      </div>
+      <div class="card reveal" style="flex:1;min-width:260px">
+        <h4 style="font-weight:700">Scale & Analyze</h4>
+        <p style="color:#6b7280">Track clicks, CTR and conversions; duplicate winning creatives and scale what works.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES (detailed product info merged from first template) -->
+  <section id="features" class="container" aria-labelledby="features-title">
+    <h2 id="features-title" style="font-size:1.6rem;font-weight:700;margin-bottom:10px">Features that help you scale fast</h2>
+    <p style="color:#6b7280;margin-bottom:18px">All the tools you need to run an affiliate video business — from product discovery to sales reporting.</p>
+
+    <div class="grid-3" style="margin-bottom:18px">
+      <div class="card reveal">
+        <h3 style="font-weight:700">Auto Trend Discovery</h3>
+        <p style="color:#6b7280">AI scans product feeds and suggests high-converting items for your niche.</p>
+      </div>
+
+      <div class="card reveal">
+        <h3 style="font-weight:700">AI Video Creator</h3>
+        <p style="color:#6b7280">Generates vertical 20–35s videos with B-roll, captions, and viral hooks.</p>
+      </div>
+
+      <div class="card reveal">
+        <h3 style="font-weight:700">Platform-ready Exports</h3>
+        <p style="color:#6b7280">Outputs formatted versions for TikTok, Instagram Reels and YouTube Shorts.</p>
+      </div>
     </div>
 
-    <img src="https://i.ibb.co/d2LZBrw/ai-video-creator.jpg" class="img-full">
-</section>
+    <div class="grid-3">
+      <div class="card reveal">
+        <h3 style="font-weight:700">Affiliate Link Builder</h3>
+        <p style="color:#6b7280">Auto-generate trackable affiliate links and embed them in captions and a bio-store page.</p>
+      </div>
 
-<!-- CTA -->
-<section style="text-align:center" class="fade">
-    <h2>Ready To Start Earning With AI-Generated Videos?</h2>
-    <p>Click the button below to get access through your affiliate-exclusive link.</p>
-    <a href="https://jvz9.com/c/3453257/428281/" class="btn">Access ShopReel AI</a>
+      <div class="card reveal">
+        <h3 style="font-weight:700">Analytics Dashboard</h3>
+        <p style="color:#6b7280">Track clicks, CTR, conversions and top performers in one place.</p>
+      </div>
 
-    <img src="https://i.ibb.co/X2DMz0q/shopreel-cover.jpg" class="img-full" style="max-width:700px;">
-</section>
+      <div class="card reveal">
+        <h3 style="font-weight:700">Multi-niche Support</h3>
+        <p style="color:#6b7280">Works across Tech, Beauty, Home, Fitness, Pets and more — scale multiple campaigns at once.</p>
+      </div>
+    </div>
 
-<footer>
-    © 2025 ShopReel AI Promotion. Landing page created by affiliate partner.
-</footer>
+    <!-- Image block: official screenshot placeholder -->
+    <div style="margin-top:20px" class="reveal">
+      <!-- 🔁 REPLACE the src below with an official ShopReel screenshot (instructions below) -->
+      <img src="https://i.ibb.co/d2LZBrw/ai-video-creator.jpg" alt="ShopReel dashboard preview" style="width:100%;border-radius:12px;box-shadow:0 18px 40px rgba(2,6,23,.08)">
+    </div>
+  </section>
 
-<!-- Scroll animation script -->
-<script>
-    const elements = document.querySelectorAll('.fade');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('show');
-        });
-    }, { threshold: 0.2 });
+  <!-- SOCIAL PROOF -->
+  <section class="container" aria-labelledby="proof-title">
+    <h2 id="proof-title" style="font-size:1.6rem;font-weight:700;margin-bottom:10px">Real results from users</h2>
 
-    elements.forEach(el => observer.observe(el));
-</script>
+    <div style="display:grid;gap:16px;grid-template-columns:repeat(3,1fr);">
+      <blockquote class="card reveal">
+        <p style="color:#111">"I made my first $2,000 in affiliate commissions in one week using ShopReelAI — and I didn't show my face once."</p>
+        <footer style="color:#6b7280;margin-top:10px">— Alex P., Affiliate Marketer</footer>
+      </blockquote>
 
+      <blockquote class="card reveal">
+        <p style="color:#111">"Saved me hours of work. I run 5 ad campaigns now and double my income month over month."</p>
+        <footer style="color:#6b7280;margin-top:10px">— Maya S., Content Creator</footer>
+      </blockquote>
+
+      <blockquote class="card reveal">
+        <p style="color:#111">"The analytics helped me find top-performing videos quickly. Replicated winners and scaled."</p>
+        <footer style="color:#6b7280;margin-top:10px">— Tom R., Ecommerce</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="container" aria-labelledby="pricing-title" style="background:linear-gradient(180deg,#fff, #fbfbff);border-radius:12px;padding:36px">
+    <h2 id="pricing-title" style="font-size:1.6rem;font-weight:700;margin-bottom:8px">Start creating & earning — plans for every stage</h2>
+    <p style="color:#6b7280;margin-bottom:18px">Try the free plan or pick Pro/Agency to scale faster.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <div class="card reveal" style="text-align:center">
+        <h3 style="font-weight:800">Starter</h3>
+        <div style="font-size:22px;font-weight:700">$0 <span style="font-size:12px;color:#6b7280">trial</span></div>
+        <ul style="color:#6b7280;margin-top:12px;text-align:left">
+          <li>3 videos / month</li>
+          <li>Basic product suggestions</li>
+          <li>Affiliate link generator</li>
+        </ul>
+        <a href="https://jvz9.com/c/3453257/428281/" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn-cta" style="margin-top:12px">Start Free</a>
+      </div>
+
+      <div class="card reveal" style="text-align:center;border:2px solid var(--accent)">
+        <h3 style="font-weight:800">Pro</h3>
+        <div style="font-size:22px;font-weight:700">$29 <span style="font-size:12px;color:#6b7280">/mo</span></div>
+        <ul style="color:#6b7280;margin-top:12px;text-align:left">
+          <li>30 videos / month</li>
+          <li>Priority discovery</li>
+          <li>Analytics + bio-storefront</li>
+        </ul>
+        <a href="https://jvz9.com/c/3453257/428281/" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn-cta" style="margin-top:12px">Try Pro</a>
+      </div>
+
+      <div class="card reveal" style="text-align:center">
+        <h3 style="font-weight:800">Agency</h3>
+        <div style="font-size:22px;font-weight:700">$99 <span style="font-size:12px;color:#6b7280">/mo</span></div>
+        <ul style="color:#6b7280;margin-top:12px;text-align:left">
+          <li>Unlimited videos</li>
+          <li>Team seats & white-label</li>
+          <li>Advanced analytics & support</li>
+        </ul>
+        <a href="https://jvz9.com/c/3453257/428281/" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn-cta" style="margin-top:12px">Get Agency</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="container" aria-labelledby="faq-title">
+    <h2 id="faq-title" style="font-size:1.6rem;font-weight:700;margin-bottom:10px">FAQ</h2>
+
+    <details class="card reveal" style="padding:18px;margin-bottom:10px">
+      <summary style="font-weight:700">Do I need technical skills?</summary>
+      <div style="color:#6b7280;margin-top:8px">No — ShopReelAI handles video assembly, captions, and hashtags for you.</div>
+    </details>
+
+    <details class="card reveal" style="padding:18px;margin-bottom:10px">
+      <summary style="font-weight:700">How to add my affiliate link?</summary>
+      <div style="color:#6b7280;margin-top:8px">When publishing, add your JVZoo affiliate link to the caption and bio-storefront. All CTAs on this landing page already point to your affiliate link.</div>
+    </details>
+
+    <details class="card reveal" style="padding:18px">
+      <summary style="font-weight:700">Is there a trial?</summary>
+      <div style="color:#6b7280;margin-top:8px">Yes — most offers include a limited free trial or a money-back guarantee (check the sales page for current terms).</div>
+    </details>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="final-cta" class="container" style="text-align:center;margin-top:12px">
+    <div class="card reveal" style="padding:28px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white">
+      <h2 style="font-size:1.5rem;margin:0 0 10px">Ready to create your first viral video?</h2>
+      <p style="opacity:.95">Create a video in under 60 seconds and get a trackable affiliate link — perfect for affiliates, dropshippers and creators.</p>
+      <div style="margin-top:14px">
+        <a href="https://jvz9.com/c/3453257/428281/" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn-cta" style="background:#fff">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div style="max-width:1100px;margin:0 auto;padding:8px 20px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div style="font-weight:700">ShopReelAI — Affiliate Landing</div>
+        <div style="color:#94a3b8;font-size:13px">© <span id="y"></span> — Created by affiliate partner</div>
+      </div>
+      <div style="margin-top:12px;color:#94a3b8;font-size:13px">Affiliate disclosure: This page contains affiliate links. Purchases through links may yield commissions for the affiliate.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts: scroll reveal + set year -->
+  <script>
+    // set year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // simple scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('show'); obs.unobserve(e.target); }
+      });
+    }, {threshold: 0.15});
+    revealEls.forEach(el => obs.observe(el));
+
+    // Ensure all CTA buttons point to the exact affiliate link (sanity)
+    const AFF = "https://jvz9.com/c/3453257/428281/";
+    document.querySelectorAll('a').forEach(a => {
+      // if a is not internal anchor/hash and not mailto: keep affiliate only for CTA classes / buttons
+      if (a.classList.contains('btn-cta') || a.href.includes('jvz9.com') ) {
+        a.href = AFF;
+        a.setAttribute('rel','noopener noreferrer nofollow sponsored');
+        a.target = "_blank";
+      }
+    });
+  </script>
 </body>
 </html>
